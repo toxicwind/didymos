@@ -1,0 +1,28 @@
+{
+  "name": "gemini-mcp",
+  "version": "1.0.0",
+  "description": "First-class Gemini API MCP server for the mesh: a self-healing multi-key pool with round-robin + automatic failover",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "bun --hot run src/index.ts",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "lint": "biome check .",
+    "fmt": "biome format --write .",
+    "build": "bun build src/index.ts --outfile dist/index.js --target bun"
+  },
+  "bin": {
+    "gemini-mcp": "./src/index.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "bun-types": "latest",
+    "typescript": "^5.3.3",
+    "@biomejs/biome": "^1.8.0"
+  },
+  "type": "module",
+  "private": true
+}
